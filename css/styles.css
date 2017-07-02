@@ -1,0 +1,112 @@
+/* Import Sanatize to reset browser defaults - Short URL(http://srt.lt/Q6P0nY) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box; /* Put padding on the inside of elements */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Our base font-size */
+    line-height: 1.75; /* Line height written in number is multiple font-size. It have dynamic effect when font-size change */
+    font-weight: 300; /* Use the included weight */
+    color: #332F21; /* Don't use black it's too harsh */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh; /* Force verticle centering since the content won't always be taller than the viewport */
+    padding: 2rem; /* Using rem values as they don't cascade like em units and are not fixed units like pixels */
+
+    background-image: linear-gradient(rgba(8,198,242, 0.7), rgba(240, 247, 124, 0.6)), url('../images/1.png'); /* Multiple Background images, semi-transparent gradient used as a fallback for Edge */
+    background-position: center center;
+	background-size: cover;
+}
+
+@supports(background-blend-mode: multiply) { /* feature query to see is this feature existing in current browser */
+ /* Use a blend mode on the background in browser that support it */
+    body {
+        background-image: linear-gradient(#08c6f2, rgb(240, 247, 124)), url('../images/1.png'); /* Multiple backgound images, Gradient overlay and the image */
+        background-blend-mode: multiply; /* Blending the Gradient with the Background Image (can't use black to blend) */
+    }
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif; /* Use google font included as headline font */
+    font-weight: 7000; /* We've only included 700 */
+    font-size: 2.25rem; /* 36px based on 16px base font size */
+    line-height: 1.3333; /* Based on 36px font size and a 48px line-height */
+}
+
+.card{
+   display: flex;
+   flex-direction: column;
+
+   max-width: 62rem;
+   min-height: 75vh;
+
+   background-color: #fff;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card__image-container {
+    max-height: 15rem;
+
+    background-image: url('../images/plastered-walls-10.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card__image {
+    max-width: 100%;
+    max-height: 65vh;
+    opacity: 0; /* Hide the image in the page, we need the DOM to render it so we have two elements with content in the card */
+    pointer-events: none; /* Allows for the image to be clicked through (able to click through even this image overlapping other element)*/
+}
+
+.card__contents {
+    display: flex;
+    flex-direction: column;
+
+    padding:  2rem;
+}
+
+.card__header,
+.card__footer {
+    flex: 0 0 auto; /* Don't grow, don't shrink, automatic size (basis) */
+}
+
+.card__footer {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.card__body {
+    flex: 1 1 auto; /* same as flex: 1; */
+}
+
+.card__title {
+    margin-top: 0;
+}
+
+@media only screen and (min-width: 53rem) { /* Base-spacing-unit * 30 */
+    .card {
+        flex-direction: row;
+        min-height: 60vh;
+    }
+
+    .card__image-container {
+        flex: 0 1 45%; /* Don't grow, do shrink, 45% width (basis) */
+        max-height: inherit; /* Reset the max-height set for mobile */
+    }
+
+    .card__contents {
+        flex: 1 1 55%; /* Grow, Shrink, 55% width */
+        padding: 3rem; /* Increase padding now we have more space to play with */
+    }
+}
