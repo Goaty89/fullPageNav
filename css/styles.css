@@ -110,3 +110,119 @@ h1 {
         padding: 3rem; /* Increase padding now we have more space to play with */
     }
 }
+
+/* Menu Button */
+.menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    cursor: pointer;
+
+    transition: background-color 500ms ease-in-out;
+}
+
+.card__image-container .menu-button {
+    margin: 1.5rem;
+}
+
+.menu-icon {
+    position:relative;
+    width: 2rem;
+    height: 1.5rem;
+}
+
+.menu-icon span {
+    position: absolute;
+    height: 0.125rem;
+    width: 100%;
+    background-color: #332F21;
+    transition: background-color 500ms ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0.0625rem; /* fall back if browser not support calc() */
+}
+
+.menu-icon span:nth-child(2) {
+    top: 0.625rem;
+}
+
+.menu-icon span:nth-child(3) {
+    top: 1.25rem;
+}
+
+.menu-button:hover,
+.menu-button:focus,
+.menu-button:active {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.menu-button:hover span,
+.menu-button:focus span,
+.menu-button:active span {
+    background: #ffffff; /* on hover, make the background-color of the menu icon white */
+}
+
+/* Turn the Menu icon into a close icon */
+.menu-icon.is-active span:nth-child(1) {
+    opacity: 0; /* Hide the first line */
+}
+
+.menu-icon.is-active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu-icon.is-active span:nth-child(3) {
+    top: 0.625rem;
+    transform: rotate(-45deg);
+}
+
+/* Fullscreen Menu */
+.fullscreen-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;  /* make sure it is always above everything */
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: top 500ms ease-in, opacity 300ms ease-in;
+}
+
+.fullscreen-menu-container .menu-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.fullscreen-menu {
+    text-align: center;
+    max-width: 62rem;
+    padding: 6rem 2rem 4rem;
+    widht: 100%
+}
+
+  .fullscreen-menu__nav{
+      margin: 3rem 0;
+  }
+
+  .fullscreen-menu__nav ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  .fullscreen-menu__nav a {
+      display: block;
+      font-size: 1.4rem;
+      padding: 1rem;
+      color: #A2A2A2;
+      text-decoration: none;
+      transition: color 300ms ease-in;
+  }
