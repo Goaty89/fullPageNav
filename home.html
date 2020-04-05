@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" type="text/css" href="./css/styles.less" />
+    <script>
+        less = {
+          env: "development"
+        };
+    </script>
+    <script src="./cdn/less.min.js" data-env="development"></script>
+    <title>One page website</title>
+</head>
+<body>
+    <article class="container">
+        <header>
+            <section>
+                <div class="logo">Business</div>
+            </section>
+            <section>
+                <nav>
+                    <div><a href="">About</a></div>
+                    <div><a href="">Contact</a></div>
+                    <!-- <div><a href="">Contact</a></div> -->
+                </nav>
+            </section>
+        </header>
+        <main>
+            <section id="page--home" class="">
+                <div class="gallery">
+                    <span role="img" class="gallery--bg image" aria-label="[place alt text here]"> 
+                        <div class="gallery--caption">
+                            <span>SAMPLE TEXT</span>
+                            <button class="btn--dark-bg button">Learn more</button>
+                        </div>
+                    </span>
+                </div>
+                <h2 class="slogan">
+                    <label for="slogan--believe">WHAT WE BELIEVE IN</label>
+                    <p id="slogan--believe">
+                        Grow your business, establish your brand, and put your customers first.
+                    </p>
+                </h2>
+            </section>
+            <hr class="divider" />
+            <section id="page--about" class="card--margin">
+                <span role="img" class="about--image image"></span>
+                <div class="about--summary card card--margin">
+                    <h2>ABOUT</h2>
+                    <label for="about--copy">WHO WE ARE</label>
+                    <p id="about--copy">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non commodo erat. Pellentesque in eros ut urna euismod facilisis quis a dui. Quisque viverra molestie pharetra. Aliquam a odio mi. Fusce a tempus purus, sit amet bibendum ipsum. Vivamus sodales rutrum mi vel ultricies. In ullamcorper quam est, et tristique lectus ultricies ut. Curabitur malesuada faucibus consectetur. Mauris eget dui lacinia, auctor lorem sed, tempor quam.
+                    </p>
+                    <button class="btn--light-bg button">LEARN MORE</button>
+                </div>
+            </section>
+            <hr class="divider" />
+            <section id="page--contact" class="">
+                <div class="card card--margin">
+                    <h2>ABOUT US</h2>
+                    <label for="contact--wrapper">Company news</label>
+                    <div id="contact--wrapper" class="contact--wrapper card">
+                        <label>10 Quick Tips About Blogging</label>
+                        <span class="copy--date">21 FEB 2020</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis posuere mauris ut ultrices. Sed leo metus, euismod in ipsum.</p>
+                    </div>
+                </div>
+            </section>
+            <hr class="divider" />
+            <section id="page--start-now" class="">
+                <div class="card card--margin grey--bg start-now">
+                    <label>Grow your business</label>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis posuere mauris ut ultrices. Sed leo metus, euismod in ipsum.
+                    </p>
+                    <button class="btn--light-bg button">START NOW</button>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="wrapper centered">
+                <span>&copy;2020</span>
+            </section>
+        </footer>
+    </article>
+</body>
+</html>
