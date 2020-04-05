@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/menu.css" />
     <link rel="stylesheet/less" type="text/css" href="./css/styles.less" />
     <script>
         less = {
@@ -20,9 +21,18 @@
             </section>
             <section>
                 <nav>
-                    <div><a href="">About</a></div>
-                    <div><a href="">Contact</a></div>
-                    <!-- <div><a href="">Contact</a></div> -->
+                    <input type="checkbox" class="toggler" />
+                    <div class="hamburger"><div></div></div>
+                    <div class="menu">
+                        <div>
+                            <div>
+                                <ul>
+                                    <li><a href="#page--about">About</a></li>
+                                    <li><a href="#page--contact">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             </section>
         </header>
